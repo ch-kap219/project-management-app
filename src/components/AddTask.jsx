@@ -20,7 +20,7 @@ const AddTask = ({ onSave, onCancel, taskToEdit }) => {
     } : {
         title: '',
         desc: '',
-        date: null, // null הוא תקין כאן, הבעיה הייתה כנראה בטעינת ה-taskToEdit
+        date: null, 
         status: 1,
         priority: 'לא דחוף'
     });
@@ -28,7 +28,7 @@ const AddTask = ({ onSave, onCancel, taskToEdit }) => {
     // ... בתוך ה-DatePicker עצמו
     <StaticDatePicker
         orientation="landscape"
-        value={task.date} // כאן הערך צריך להיות dayjs object או null
+        value={task.date} 
         onChange={(newDate) => setTask({ ...task, date: newDate })}
     />
 
@@ -42,7 +42,7 @@ const AddTask = ({ onSave, onCancel, taskToEdit }) => {
 
     ;
     const handleSave = () => {
-        // אם זו עריכה, נשמור על ה-ID המקורי. אם זו משימה חדשה, נוסיף ID.
+       
         const finalTask = taskToEdit
             ? { ...task }
             : { ...task, id: Date.now() };
@@ -105,7 +105,7 @@ const AddTask = ({ onSave, onCancel, taskToEdit }) => {
             
 
             <DialogActions>
-                {/* הוספנו type="button" לכל הכפתורים */}
+             
                 <Button type="button" onClick={onCancel}>ביטול</Button>
 
                 {activeStep > 0 && (

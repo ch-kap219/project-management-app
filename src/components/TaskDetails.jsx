@@ -6,7 +6,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 const TaskDetails = ({ selectedTask, onClose, onEdit, onDelete, taskToDelete, setTaskToDelete, executeDelete, onStatusChange }) => {
     return (
         <>
-            {/* דיאלוג הצגת פרטי המשימה */}
+
             <Dialog open={!!selectedTask} onClose={onClose} maxWidth="sm" fullWidth>
                 {selectedTask && (
                     <>
@@ -49,7 +49,6 @@ const TaskDetails = ({ selectedTask, onClose, onEdit, onDelete, taskToDelete, se
                 )}
             </Dialog>
 
-            {/* דיאלוג אישור מחיקה - עבר לפה! */}
             <Dialog open={!!taskToDelete} onClose={() => setTaskToDelete(null)}>
                 <DialogTitle>האם את/ה בטוח/ה?</DialogTitle>
                 <DialogContent>

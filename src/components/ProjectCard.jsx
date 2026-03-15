@@ -13,7 +13,7 @@ const ProjectCard = ({ project, onDelete, onEdit, onEnter }) => {
             mb: 1,
             width: '100%'
         }}>
-            {/* מיכל תוכן גמיש שדוחף את הכפתורים שמאלה */}
+            
             <Box sx={{
                 display: 'flex',
                 flex: 1,
@@ -24,7 +24,7 @@ const ProjectCard = ({ project, onDelete, onEdit, onEnter }) => {
                 mr: 12 // מרחיק את כל גוש הטקסט מהכפתורים בצד שמאל
             }}>
 
-                {/* שם הפרויקט (עכשיו בצד ימין קיצוני) */}
+             
                 <Typography
                     variant="h6"
                     sx={{
@@ -38,7 +38,7 @@ const ProjectCard = ({ project, onDelete, onEdit, onEnter }) => {
                     {project.name}
                 </Typography>
 
-                {/* תיאור הפרויקט (עכשיו באמצע/משמאל לשם) */}
+              
                 <Typography
                     variant="body2"
                     color="text.secondary"
@@ -53,13 +53,13 @@ const ProjectCard = ({ project, onDelete, onEdit, onEnter }) => {
                     {project.desc}
                 </Typography>
 
-                {/* תאריך יצירה (שמאל לתיאור) */}
+            
                 <Typography variant="caption" color="text.disabled" sx={{ whiteSpace: 'nowrap', textAlign: 'right', minWidth: '80px' }}>
                     {project.createdAt}
                 </Typography>
             </Box>
 
-            {/* כפתורי הפעולה (צד שמאל) */}
+       
             <Stack direction="row" spacing={1} sx={{ flexShrink: 0 }}>
                 <Button variant="outlined" size="small" onClick={() => onEdit(project)}>ערוך</Button>
                 <Button variant="outlined" color="error" size="small" onClick={() => onDelete(project.id)}>מחק</Button>

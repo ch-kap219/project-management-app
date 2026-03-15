@@ -21,8 +21,7 @@ function ProjectsPage() {
 
     const saveProject = (projectData) => {
         if (editingProject) {
-            // כאן הקסם: אנחנו לוקחים את הנתונים החדשים מהטופס (projectData)
-            // ומוסיפים להם בכוח את התאריך המקורי שהיה קיים (editingProject.createdAt)
+            
             const updated = projects.map(p =>
                 p.id === editingProject.id
                     ? { ...projectData, id: p.id, createdAt: editingProject.createdAt }
@@ -31,7 +30,6 @@ function ProjectsPage() {
             setProjects(updated);
             localStorage.setItem('myProjects', JSON.stringify(updated));
         } else {
-            // פרויקט חדש - כאן הוא נוצר בפעם הראשונה עם תאריך
             const newProject = {
                 ...projectData,
                 id: Date.now().toString(),

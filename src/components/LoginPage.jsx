@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 export default function LoginPage() {
 
     // יוצרים את הזיכרון של הכפתור
-    // buttonText זה השם של המשתנה, התחלה הוא יהיה "התחבר"
     const [buttonText, setButtonText] = useState('התחבר');
     const [open, setOpen] = useState(false);
     const anchorRef = React.useRef(null);
@@ -58,13 +57,13 @@ export default function LoginPage() {
         
 
             <Box sx={{
-                display: 'flex',          // הופך את הקופסה למערכת סידור מודרנית
-                justifyContent: 'center', // מרכז הכל לצדדים (ימין-שמאל)
-                alignItems: 'center',     // מרכז הכל למעלה-למטה
-                minHeight: '100vh',       // מכריח את הקופסה להיות בגובה כל המסך
-                width: '100vw',           // מכריח את הקופסה להיות ברוחב כל המסך
-                bgcolor: '#f5f5f5',       // צבע רקע לכל המסך
-                flexDirection: 'column'   // מסדר הכל בטור אחד
+                display: 'flex',          
+                justifyContent: 'center', 
+                alignItems: 'center',     
+                minHeight: '100vh',       
+                width: '100vw',         
+                bgcolor: '#f5f5f5',     
+                flexDirection: 'column'  
             }}>
 
                 <Paper elevation={3} sx={{ padding: 4, width: '300px', textAlign: 'center' }}>
@@ -74,8 +73,8 @@ export default function LoginPage() {
                         variant="standard"
                         fullWidth
                         margin="normal"
-                        value={username} // זה חסר לך!
-                        onChange={(e) => setUsername(e.target.value)} // זה חסר לך!
+                        value={username} 
+                        onChange={(e) => setUsername(e.target.value)} 
                     />
 
                     <TextField
@@ -84,8 +83,8 @@ export default function LoginPage() {
                         variant="standard"
                         fullWidth
                         margin="normal"
-                        value={password} // זה חסר לך!
-                        onChange={(e) => setPassword(e.target.value)} // זה חסר לך!
+                        value={password} 
+                        onChange={(e) => setPassword(e.target.value)}
                     />
 
                     {/* הכפתור המפוצל */}
@@ -96,7 +95,7 @@ export default function LoginPage() {
                             {buttonText}
                         </Button>
 
-                        {/* כפתור החץ לפתיחת התפריט */}
+                        {/* כפתור החץ לפתיחת התפריט  */}
                         <Button
                             size="small"
                             onClick={() => setOpen(!open)}
